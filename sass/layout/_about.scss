@@ -1,0 +1,89 @@
+@use '../abstracts';
+
+.gallery {
+    // border: 2px solid #000;
+    background: abstracts.$background-main-dark;
+    max-width: 100%;
+    padding: 10vh 5vw;
+    
+    .grid-container {
+        // border: 2px solid blue;
+        background-color: #ddd;
+
+        display: grid;
+        grid-auto-rows: auto;
+        // grid-auto-rows: 300px;
+        grid-template-columns: auto auto;
+        gap: 0.25rem;
+        overflow: hidden;
+        
+        @include abstracts.md {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+
+        }
+
+        img {
+            height: 100%;
+            width: 100%;
+            object-fit: contain;
+            object-position: top;
+            // max-height: 50vh;
+        }
+
+    //     &:has(:hover){
+    //     img {
+    //         &:not(:hover){
+    //             opacity: .8;
+    //         }
+    //     }
+    // }
+    
+    }
+
+    .image-container {
+        // border: 2px solid red;
+        margin: 10vh auto;
+        display: grid;
+        gap: 1rem;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+
+        img {
+            height: 100%;
+            border: 1px solid transparent;
+            
+            &:hover {
+                scale: 1.0125;
+                border-color: abstracts.$text-link;
+            }
+
+        }
+
+
+    }
+
+    .row-container {
+        // border: 2px solid red;
+        height: 350px;
+        overflow-y: hidden;
+        padding: 0.25rem;
+
+        display: flex;
+        gap: .5rem;
+
+        img {
+            width: 80%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    img {
+        border-radius: 0.25rem;
+        object-fit: cover;
+        transition: 250ms ease;
+
+        
+        
+    }
+
+}

@@ -1,0 +1,190 @@
+@use '../abstracts';
+
+.hero {
+    // border: 2px solid green;
+    background-color: abstracts.$background-gray;
+    background-color: abstracts.$background-main;
+    position: relative;
+
+    color: abstracts.$text-brand;
+
+    height: 95dvh;
+    height: 95vh;
+    padding: 10vh 5vw 5vh;
+    padding: 0;
+    
+    overflow: hidden;
+    isolation: isolate;
+    text-align: center;
+
+    display: grid;
+    grid-template-rows: auto auto;
+    // gap: 5vh;
+        // grid-template-columns: 1fr;
+        
+        // grid-template-areas: 'image-1 image-2' 
+        //                         ' content content ';
+
+    @include abstracts.md {
+        // height: 90vh;
+        padding: 10vh 5vw 5vh;
+        // // padding: 10vh 5vw 5vh;
+        // // border: 2px solid red;/
+        // display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr ; 
+        // background-color: abstracts.$background-main;
+
+        // // column-gap: 1rem;
+        // // align-items: center;
+        // // grid-template-areas: 'image-1 . image-2'
+        // //                         'image-1 content image-2';
+        // grid-template-areas: 'image-1 image-2'
+        //                         ' content content ';
+                                
+        // grid-template-areas: 'image-1 image-2'
+        //                         ' content content ';
+    }
+
+    @include abstracts.xlg {
+        // padding: 15vh 0;
+        // grid-template-columns: repeat(3, 1fr);
+        // grid-template-columns: 25% auto 25%;
+        // grid-template-columns: auto 50% auto;
+        // grid-template-areas: 'image-1 content image-2'
+        //                         'image-1 content image-2 ';
+    } 
+
+
+}
+
+
+.hero-img {
+    // border: 1px solid red;
+    overflow: hidden;
+    box-shadow: 0 0.5rem 1rem hsla(0, 0%, 0%, 0.25);
+
+    img {
+        height: 100%;
+        width: 100%;
+        max-width: 500px;
+        margin-inline: auto;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    @include abstracts.lg {
+        box-shadow: none;
+        border: none;
+        border-radius: 0.25rem;
+        // height: 400px;
+        max-height: 500px;
+        
+    }
+
+}
+
+
+
+
+.hero-content {
+    // grid-area: content;
+    // background-color: abstracts.$background-main;
+    padding: 5vh 5vw 5vh;
+    // text-align: center;
+    // overflow: hidden;
+
+    @include abstracts.md {
+        top: unset;
+    }
+    
+    .hero-title {
+        background-color: abstracts.$background-main-dark;
+        padding: 1rem;
+        border-radius: .25rem;
+        box-shadow: 0 0.5rem 1rem hsla(0, 0%, 0%, 0.150);
+
+
+        @include abstracts.md {
+            padding: 1rem;
+            box-shadow: none;
+            background-color: transparent;
+        }
+        
+
+        h1 {
+            text-transform: capitalize;
+            font-size: abstracts.$font-clamp-lg;
+            margin-bottom: 0rem;
+
+            span {
+                color: abstracts.$span-crimson;
+            }
+
+            
+        }
+    
+        h2 {
+            margin-bottom: 0.25rem;
+            &::first-letter {
+                text-transform: capitalize;
+            }
+
+            // color: abstracts.$overlay-blue-light;
+            font-size: abstracts.$font-clamp-md;
+            font-weight: 500;
+        }
+
+    }
+
+    p {
+        margin: 0.5rem 0 0;
+        position: relative;
+        
+        a {
+            color: abstracts.$text-dark;
+            transition: .2s;
+            &:hover {
+                color: abstracts.$text-brand;
+                text-decoration: none;
+            }
+        }
+
+        
+
+    }
+
+}
+
+
+
+.btn-main {
+    display: block;
+    color: abstracts.$text-light;
+    // color: #C3A356;
+    background: abstracts.$cta-btn;
+    background: #c3a356;
+    background: #D15F33;
+    background: linear-gradient(hsl(17, 63%, 59%), #D15F33);
+    
+    width: max-content;
+    padding: 0.5rem 2rem;
+    margin: 1rem 0 0;
+    margin: 1rem auto 0;
+    border-radius: 0.5rem;
+    
+    font-size: abstracts.$font-clamp-sm;
+    font-weight: 600;
+    text-decoration: none;
+    text-transform: capitalize;
+    text-transform: uppercase;
+    letter-spacing: .15rem;
+    
+
+    &:hover, &:focus {
+    color: abstracts.$text-brand;
+
+}
+
+}
+

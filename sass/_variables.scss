@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Antic+Slab&family=Open+Sans:wght@300;400;500;700&display=swap');
+
+$font-serif: 'Antic Slab', serif;
+$font-sans: 'Open Sans', sans-serif;
+
+$background: #161616;
+$background-crimson: linear-gradient(60deg, #960d28, #ac0929);
+$overlay: linear-gradient(60deg, #20262e, #485563 );
+$overlay-blue-dark:#29323c;
+$overlay-blue-darker:#20262e;
+$overlay-blue-light: #485563;
+$secondary-background: #f4f4f4;
+$background-active: #fff;
+
+$text-dark: #000;
+$text-navy: #161616;
+// $text-brand: #ead2a1;
+$text-brand-hover: hsl(40, 63%, 87%);
+$text-light: #f4f4f4;
+$text-hover-dark: #000a;
+$text-hover-light: #fffa;
+$text-label-light: #fff;
+$text-label-dark: #000;
+
+$invalid: #f4f4f4;
+

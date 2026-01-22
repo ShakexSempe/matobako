@@ -1,0 +1,95 @@
+// BACKGROUND COLORS
+$background-light: #fff;
+// $background-main: #f4eadf;
+// $background-main: #746A49;
+$background-main: #c3c3b1;
+$background-main-dark: hsl(60, 13%, 83%);
+$background-main-trans: hsla(60, 13%, 73%, .9);
+$background-gray: hsl(60, 13%, 93%);
+$background-dark: hsl(46, 23%, 25%);
+$background-darker: hsl(46, 23%, 15%);
+$background-navbar: #746A49;
+$background-light: #fff000;
+$background-light: #f4f4f4;
+$brand-overlay: #a6b2bf;
+
+// TEXT COLORS
+$text-brand: #4F352C;
+$text-brand-light: hsl(42, 48%, 90%);
+$text-main: #000;
+$text-light: #f4f4f4;
+$text-dark: #000;
+$text-link: #D15F33;
+$text-link: hsl(17, 63%, 51%);
+$text-link-light: hsl(17, 63%, 89%);
+$text-link-green: hsl(120, 63%, 25%);
+$text-nav: hsl(42, 48%, 90%);
+$text-placeholder: hsl(0, 0%, 24%);
+$nav-toggle: hsl(42, 48%, 90%);
+
+
+// BORDER COLORS
+$border-light: #fff8;
+$border-light-hover: yellow;
+$overlay-border-light: hsl(211, 16%, 85%);
+
+// BUTTON COLORS
+$cta-btn: #D15F33;
+$btn-secondary: hsl(0, 0%, 100%);
+
+
+// BRAND COLORS
+$brand: lime;
+$brand: hsl(209, 20%, 75%);
+$brand: #4F352C;
+$brand-border: hsla(210, 19%, 75%, .5);
+$crimson-border: #dc143c8c;
+$span-gold: #ead2a1;
+$span-light: hsl(210, 19%, 75%);
+$light-span: #fff9;
+$span-brand: #f72751;
+$span-violet: violet;
+$span-blue: #0000ff;
+$span-crimson-dark: #dc143c8c;
+$span-orange: tomato;
+$border: #ead2a15e;
+$trans-border: rgba(255, 255, 255, 0.155);
+$dark-crimson:#b60f30;
+$span-crimson: hsl(348, 83%, 40%);
+
+$brand-shadow: hsla(211, 16%, 33%, 0.35);
+// $brand-shadow: #dc143c8c;
+$overlay-trans: hsla(212, 19%, 10%, 0.773);
+
+
+
+// GRADIENTS
+$overlay-60deg: linear-gradient(-60deg, #29323c 0%, #485563 100%);
+$overlay: linear-gradient(0deg, #29323c 0%, #485563 100%);
+$overlay-dark: linear-gradient(0deg, hsl(214, 18%, 15%) 30% , hsl(212, 19%, 25%) 70%);
+$overlay-btn: linear-gradient(0deg, #20262e, #485563 );
+$overlay-btn-hover: linear-gradient(0deg , #485563, #20262e );
+$overlay-blue-dark:hsl(213, 20%, 20%);
+$overlay-blue-darker:hsl(214, 18%, 15%);
+$overlay-blue-darkest:hsl(213, 18%, 10%);
+$overlay-blue-black:hsl(213, 18%, 5%);
+$overlay-black:hsl(213, 18%, 1%);
+$overlay-blue-light: hsl(211, 16%, 33%);
+$overlay-blue-lighter: hsl(211, 16%, 75%);
+$overlay-footer: linear-gradient(0deg, #000, #15191e);
+
+// NAV COLORS
+$nav-background: #29323c;
+$nav-active-background: #1b2127;
+
+// BUTTON COLORS
+$button-crimson: linear-gradient(0deg, #3f0d0d, #dc134c);
+$button-light: linear-gradient(0deg, #ddd, #f4f4f4);
+$button-light-hover: linear-gradient(0deg, #f4f4f4, #ddd);
+$button-crimson-hover: linear-gradient(0deg, #dc134c , #3f0d0d);
+
+// FORM COLORS  
+$background-invalid: #f7cdd5c7;
+$text-invalid: #000;
+$background-valid: #cdf7d3c7;
+$text-valid: #000;

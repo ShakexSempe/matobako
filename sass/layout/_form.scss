@@ -1,0 +1,224 @@
+@use '../abstracts';
+@use '../variables';
+
+form {
+    padding: 5vh 5vw 10vh;
+    background-color: abstracts.$background-gray;
+    // max-width: 800px;
+    margin-inline: auto;
+
+    @include abstracts.lg {
+        margin-block: 5vh;
+        // padding: 10vh 10vw;
+        width: 80vw;
+        border-radius: abstracts.$border-radius-md;
+    }
+
+    fieldset {
+        width: 100%;
+        margin: 5vh auto 10vh;
+        padding: 0.5rem;
+        height: auto;
+        overflow-y: auto;
+
+        
+        background-color: #fafafa;
+        border-radius: abstracts.$border-radius-md;
+        border: 1px solid abstracts.$background-navbar;
+        border: 1px solid #0002;
+        box-shadow: 0 0.5rem 1rem hsla(0, 0%, 0%, 0.150);
+        transition: 500ms;
+        position: relative;
+        isolation: isolate;
+        
+        // LAST FIELDSET MARGIN-BOTTOM TO SEND BUTTON
+        &:last-of-type {
+            margin-bottom: 5vh;
+        }
+
+        @include abstracts.md {
+            padding: 1rem;
+            max-width: 600px;
+        }
+
+        legend {
+        margin: 0 auto;
+        padding: 0.25rem 1rem;
+
+        font-size: abstracts.$font-clamp-sm;
+        text-transform: capitalize;
+
+        background: abstracts.$background-navbar;
+        color: abstracts.$text-light;
+
+        border-radius: abstracts.$border-radius-sm;
+        border: 1px solid abstracts.$background-navbar;
+
+        cursor: help;
+    }
+
+
+        .field-text {
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+
+
+        .input-div {
+            width: 100%;
+
+            label {
+                margin-top: .5em;
+            }
+
+            input {
+                text-overflow: ellipsis;
+            }
+        }
+
+    }
+
+    .input-div {
+        display: flex;
+        flex-direction: column;
+
+        margin: 0 0 1rem 0;
+        padding: .5em .1em;
+        transition: .3s ease;
+        position: relative;
+        color: abstracts.$text-dark;
+        // scale: .97;
+
+
+        label {
+            // border: 1px solid green;
+            transform: translateY(-.25em);
+            text-transform: capitalize;
+            transition: .2s;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
+
+            span {
+                color: #000a;
+                text-transform: lowercase;
+                font-size: abstracts.$font-clamp-xsm;
+            }
+
+        }
+
+        input,
+        textarea {
+            outline: 1px solid #000;
+            outline-offset: -3px;
+            padding: 0.75rem;
+            transition: .3s ease;
+            // background-color: abstracts.$overlay-blue-darker;
+            // color: abstracts.$text-brand;
+            border-radius: 5px;
+            border: none;
+            font-size: abstracts.$font-clamp-sm;
+
+
+            &:focus {
+                outline: 1px dashed lime;
+
+                &::placeholder {
+                    // color: abstracts.$text-brand;
+                    // opacity: 1;
+                }
+            }
+
+            &:invalid {
+
+                // background-color: #161616;
+                // color: abstracts.$text-light;
+                // border: none;
+                // outline: 1px dashed abstracts.$text-link;
+            }
+        }
+
+        textarea {
+            padding: .5em;
+            font-size: 1.2em;
+
+            &:invalid {
+                // background-color: abstracts.$invalid;
+            }
+        }
+
+        ::placeholder {
+            color: hsl(0, 0%, 64%);
+            color: abstracts.$text-placeholder;
+            // color: abstracts.$text-light-trans;
+            text-transform: capitalize;
+            opacity: .5;
+        }
+
+    }
+
+    // submit button       
+        #submit-btn {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+    
+            // width: max-content;
+            margin: 0 auto 5vh;
+            padding: 0.75rem;
+    
+    
+            color: abstracts.$text-light;
+            text-transform: uppercase;
+            font-size: abstracts.$font-clamp-sm;
+            font-weight: 500;
+            letter-spacing: .0125em;
+    
+            border: none;
+            border-radius: abstracts.$border-radius-md;
+    
+            position: relative;
+            isolation: isolate;
+            cursor: default;
+            transition: 250ms ease;
+    
+            @include abstracts.sm {
+                cursor: pointer;
+            }
+            @include abstracts.md {
+                justify-content: center;
+                cursor: pointer;
+            }
+    
+            &.btn-bg {
+    
+                background: #5f0315;
+                    background: #D15F33;
+
+                &::before {
+                        background: linear-gradient(hsl(17, 63%, 59%), #D15F33);
+                    }
+    
+                &::after {
+                    background: #D15F33;
+                }
+    
+            }
+    
+            &:hover {
+                color: abstracts.$text-brand;
+                .icon {
+                        rotate: 30deg;
+                    }
+            }
+
+            &:active {
+                .icon {
+                    rotate: 45deg;
+                }
+            }
+
+        }
+}

@@ -1,0 +1,110 @@
+@use '../abstracts';
+
+
+footer {
+    width: 100%;
+    background-color: abstracts.$background-dark;
+    color: abstracts.$text-light;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+
+    @include abstracts.lg {
+        flex-direction: row;
+        justify-content: space-around;
+        justify-content: space-between;
+        gap: 2rem;
+        padding: 0 10vw 0;
+    }
+
+    .footer-div {
+        padding: 5vh 5vw;
+        @include abstracts.lg {
+            padding: 10vh 5vw;
+        }
+
+    //     ul {
+    //         list-style: none;
+    //         display: flex;
+    //         flex-direction: column;
+    //         gap: 0.5rem;
+    //     }
+    }
+
+    h2 {
+        text-transform: capitalize;
+    }
+
+    .contact-details {
+        margin-top: 1rem;
+
+        &.contact-details-1 {
+            padding-bottom: 1rem;
+            border-bottom: 1px solid abstracts.$background-main;
+        }
+
+        ul > li {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 0.25rem;
+        }
+
+        .contact-name {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            margin-bottom: 0.25rem;
+            
+            p {
+                font-weight: 600;
+            }
+        }
+
+
+        .icon {
+            // border: 1px solid red;
+            display: inline;
+        }
+
+        &:hover {
+
+            .contact-name {
+                .icon {
+                    opacity: .5;
+                }
+            }
+
+            a {
+                text-decoration-color: abstracts.$text-link;
+                text-underline-offset: 0;
+                color: abstracts.$text-link-light;
+            }
+
+        }
+
+    }
+
+    .copyright {
+        background-color: abstracts.$background-darker;
+        // border: 1px solid red;
+        @include abstracts.md {
+            display: grid;
+            align-content: center;
+        }
+    }
+    
+    p {
+        text-transform: capitalize;
+        line-height: 1.8;
+    }
+
+    a {
+        color: abstracts.$text-link;
+        text-decoration-color: transparent;
+        position: relative;
+        transition: 250ms ease;
+        text-underline-offset: 6px;
+    }
+}

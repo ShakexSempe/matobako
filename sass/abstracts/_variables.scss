@@ -1,0 +1,32 @@
+
+
+// BORDER RADIUS
+$brand-br: .25rem;
+$border-radius-xsm: .15rem;
+$border-radius-sm: .25rem;
+$border-radius-md: .5rem;
+$border-radius-lg: 1rem;
+$border-radius-xlg: 50%;
+// SPAN AND BRAND
+$nav-height: 7vh;
+
+// BOX SHADOWS
+$dark-theme-shadow: 0 .5rem 1rem hsla(0, 0%, 100%, 0.05);
+
+$box-shadow-item-sm: .125rem .25rem .25rem rgba(0, 0, 0, 0.133);
+
+$box-shadow-item-md: 0rem .5rem 0.5rem rgba(0, 0, 0, .250);
+
+$box-light-top-sm: inset 2px 2px 3px rgba(225, 225, 225, .05),
+                    inset -2px -2px 3px rgba(0, 0, 0, .150),
+                    .025rem .25rem .5rem rgba(0, 0, 0, .150);
+
+$box-light-top-sm-hover: inset 2px 2px 3px rgba(0, 0, 0, .200),
+                    inset -2px -2px 3px rgba(225, 225, 225, 0.2),
+                    .025rem .225rem .25rem rgba(0, 0, 0, .250);
+
+$box-dark-top-sm: inset 2px 2px 3px rgba(0, 0, 0, 0.200),
+                                        inset -2px -2px 2px rgba(221, 221, 221, 0.300),
+                                        3px 3px 3px rgba(0, 0, 0, .200);
+
+

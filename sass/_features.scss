@@ -1,0 +1,123 @@
+@use './abstracts';
+
+#features {
+    width: 100%;
+    // overflow: hidden;
+    // margin: 0 auto;
+    padding: 0;
+    p {
+        // text-align: center;
+        margin: 5vh auto 1em;
+    }
+    // border: 1px solid red;
+    // padding: 0;
+    .feature-items {
+        // border: 1px solid blue;
+        padding: .5em;
+
+        .feature-control {
+            // border: 1px solid yellow;
+            padding: .5em 0;
+            .feature-content {
+                // border: 1px solid pink;
+                display: flex;
+                flex-direction: column;
+                input {
+                    width: 50%;
+                    padding: .5em;
+                    margin: .5em 0;
+                    border: 2px solid#000;
+                    border-radius: 5px;
+                }
+
+                textarea {
+                    // background-color: $overlay-blue-light;
+                    width: 100%;
+                }
+            }
+        }
+
+        button {
+            border-radius: 20px;
+            padding: .5em 1em;
+            margin: 0 .5em;
+            cursor: cell;
+            text-transform: capitalize;
+            transition: .2s;
+            &.submit-btn {
+                // background: $overlay;
+                // color: $text-light;
+            }
+            &.clear-btn {
+                // background: $background-crimson;
+                // color: $text-light;
+            }
+
+            &:active {
+                transform: scale(.9);
+            }
+        }
+    }
+
+    .feature-container {
+        border: none;
+        outline: none;
+        // background: $text-brand;
+        padding:.5em;
+        margin: 5vh 0;
+        border-radius: 5px;
+        overflow: hidden;
+
+
+        .item-name {
+            border-radius: 20px;
+            text-align: center;
+            outline: none;
+            margin: 0 auto 1em;
+            width: 50%;
+            text-transform: capitalize;
+            // background: $overlay;
+            box-shadow: inset 2px 2px 2px #fffa,
+                        inset -2px -2px 2px hsla(0, 0%, 0%, 0.667),
+                        0px 3px 3px hsla(0, 0%, 0%, 0.350);
+        }
+        .item-description {
+            // background-color: $overlay-blue-light;
+            color: #ddd;
+            width: 100%;
+            // outline: 3px solid $text-brand;
+            // outline: 3px solid #fff;
+            // outline-offset: -3px;
+            box-shadow: inset 2px 2px 2px #fffa,
+            inset -2px -2px 2px #000a,
+            0px 3px 3px hsla(0, 0%, 0%, 0.350);
+            outline: none;
+            border: none;
+        }
+        .feature-list {
+            .input-div {
+                margin-bottom: 2em;
+
+                .delete-btn {
+                    // border: 2px solid red;
+                    width: 2em;
+                    height: 2em;
+                    display: grid;
+                    place-items: center;
+                    padding: .1em;
+                    border-radius: 50%;
+                    cursor: pointer;
+                    transform: translateY(50%);
+                    background-color: #000;
+                    color: #f4f4f4;
+                    box-shadow: inset 2px 2px 3px #fffa,
+                                2px 2px 3px rgba(0, 0, 0, 0.388);
+
+                    &:active {
+                        transform: translateY(50%) scale(.9);
+                    }
+                }
+            }
+        }
+    }
+}

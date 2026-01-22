@@ -1,0 +1,86 @@
+@use '../abstracts/mixin';
+@use '../abstracts/colors';
+
+.btn-bg {
+    // border: 3px solid red;
+
+    position: relative;
+    isolation: isolate;
+    transition: all 250ms;
+
+    
+    @include mixin.xsm {
+        cursor: pointer;
+        cursor: default;
+    }
+
+    &::before, &::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+        transition: inherit;
+        background: inherit;
+        border-radius: inherit;
+    }
+
+    &::before {
+        box-shadow: 0 0.25rem 0.25rem hsla(0, 0%, 0%, 0.15),
+                    inset 0.15rem 0.15rem 0.15rem hsla(0, 0%, 100%, 0.15);
+                    // inset -0.15rem -0.15rem 0.15rem hsla(0, 0%, 0%, 0.075);
+    }
+    
+    &::after {
+        opacity: 0;
+        box-shadow: 0 0.2rem 0.15rem hsla(0, 0%, 0%, 0.25),
+                    inset 0.15rem 0.15rem 0.15rem hsla(0, 0%, 0%, 0.075);
+    } 
+
+    @include mixin.sm {
+        
+        &:hover, &:focus {
+            scale: .975;
+            &::after {
+                opacity: 1;
+            }
+            &::before {
+                opacity: 0;
+            }
+        }
+        
+    }
+
+
+    
+
+    &:active {
+        scale: .965;
+        &::after {
+            opacity: 1;
+        }
+        &::before {
+            opacity: 0;
+        }
+    }
+}
+
+.top-btn {
+    position: fixed;
+    bottom: 10vh;
+    right: 0.25rem;
+    width: 1rem;
+    height: 1rem;
+    // background-color: #ffff;
+    border: 3px solid colors.$text-link;
+    border-right-color: #0001;
+    border-bottom-color: #0001;
+    // mix-blend-mode: difference;
+    rotate: 45deg;
+    z-index: 50;
+
+    cursor: default;
+
+    @include mixin.xsm {
+        cursor: pointer;
+    }
+} 
