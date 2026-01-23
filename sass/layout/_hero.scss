@@ -4,14 +4,16 @@
     // border: 2px solid green;
     background-color: abstracts.$background-gray;
     background-color: abstracts.$background-main;
+    background-color: #000;
     position: relative;
 
     color: abstracts.$text-brand;
+    color: abstracts.$text-light;
 
     height: 95dvh;
     height: 95vh;
-    padding: 10vh 5vw 5vh;
     padding: 0;
+    padding: 5vh 5vw 5vh;
     
     overflow: hidden;
     isolation: isolate;
@@ -27,7 +29,7 @@
 
     @include abstracts.md {
         // height: 90vh;
-        padding: 10vh 5vw 5vh;
+        // padding: 10vh 5vw 5vh;
         // // padding: 10vh 5vw 5vh;
         // // border: 2px solid red;/
         // display: grid;
@@ -60,17 +62,18 @@
 
 
 .hero-img {
-    // border: 1px solid red;
+    // border: 1px solid #f4f4f4;
+    border-radius: .25rem;
     overflow: hidden;
     box-shadow: 0 0.5rem 1rem hsla(0, 0%, 0%, 0.25);
 
     img {
         height: 100%;
         width: 100%;
-        max-width: 500px;
+        // max-width: 500px;
         margin-inline: auto;
         object-fit: cover;
-        object-position: center;
+        object-position: center ;
     }
 
     @include abstracts.lg {
@@ -85,14 +88,15 @@
 }
 
 
-
-
 .hero-content {
     // grid-area: content;
     // background-color: abstracts.$background-main;
-    padding: 5vh 5vw 5vh;
+    // padding: 5vh 5vw 5vh;
     // text-align: center;
     // overflow: hidden;
+    margin-top: 5vh;
+    // border: 1px solid #f4f4f4;
+    // border-radius: .25rem;
 
     @include abstracts.md {
         top: unset;
@@ -100,9 +104,12 @@
     
     .hero-title {
         background-color: abstracts.$background-main-dark;
+        background-color: #fff1;
+        // border: 1px solid #f4f4f4;
         padding: 1rem;
         border-radius: .25rem;
         box-shadow: 0 0.5rem 1rem hsla(0, 0%, 0%, 0.150);
+        // box-shadow: 0 0.5rem 1rem #fff2;
 
 
         @include abstracts.md {
@@ -140,6 +147,7 @@
     p {
         margin: 0.5rem 0 0;
         position: relative;
+        color: abstracts.$text-lighter;
         
         a {
             color: abstracts.$text-dark;
