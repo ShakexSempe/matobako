@@ -17,6 +17,8 @@ $background-light: #f4f4f4;
 $brand-overlay: #a6b2bf;
 
 $toggle-close: #D15F33;
+$brand: hsl(42, 48%, 60%);
+$brand-trans: hsla(39, 100%, 50%, 0.250);
 
 // TEXT COLORS
 $text-brand: #4F352C;
@@ -46,9 +48,9 @@ $btn-secondary: hsl(0, 0%, 100%);
 
 
 // BRAND COLORS
-$brand: lime;
-$brand: hsl(209, 20%, 75%);
-$brand: #4F352C;
+// $brand: lime;
+// $brand: hsl(209, 20%, 75%);
+// $brand: #4F352C;
 $brand-border: hsla(210, 19%, 75%, .5);
 $crimson-border: #dc143c8c;
 $span-gold: #ead2a1;

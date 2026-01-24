@@ -19,7 +19,8 @@
     background-color: abstracts.$background-navbar;
     background-color: transparent;
     z-index: 10;
-    box-shadow: 0 0.25rem 1rem hsla(0, 0%, 0%, 0.250);
+    isolation: isolate;
+    // box-shadow: 0 0.25rem 1rem hsla(0, 0%, 0%, 0.250);
     
     a {
         color: #C3A356;
@@ -96,6 +97,17 @@
         height: 100%;
         left: 0;
         z-index: -1;
+        transition: 250ms;
+    }
+
+    &.header-io {
+        &::after {
+            // background-color: #ff0000;
+            // background-color: transparent;
+            // background-color: #0004;
+            translate: 0 -100%;
+
+        }
     }
 
 }
@@ -310,6 +322,7 @@
 
             .bar {
                 background-color: abstracts.$toggle-close;
+                background-color: abstracts.$brand;
 
                 &::before {
                     transform: translateY(-0.25rem);
