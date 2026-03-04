@@ -910,10 +910,15 @@ form #submit-btn:active .icon {
   overflow: hidden;
 }
 
-.btn-main::before {
+.btn-main::before, .btn-main::after {
   content: "";
   position: absolute;
   border-radius: inherit;
+  border: 1px solid transparent;
+  transition: 150ms ease;
+}
+
+.btn-main::before {
   background-color: #000;
   inset: 1px;
   z-index: -1;
@@ -921,9 +926,6 @@ form #submit-btn:active .icon {
 }
 
 .btn-main::after {
-  content: "";
-  position: absolute;
-  border-radius: inherit;
   width: 200%;
   height: 200%;
   top: -50%;
@@ -948,12 +950,16 @@ form #submit-btn:active .icon {
     /* Rotates the background infinitely */
   }
 }
+.btn-main:hover, .btn-main:focus {
+  color: #ccc;
+}
+
 .btn-main:hover::after, .btn-main:focus::after {
   opacity: 0;
 }
 
 .btn-main:hover::before, .btn-main:focus::before {
-  background: #111;
+  border-bottom: 1px solid #ff7300;
 }
 
 .btn-bg {

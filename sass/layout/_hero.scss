@@ -165,7 +165,7 @@
 
 
 .btn-main {
-    // border: 1px solid yellow;
+    // border: 1px solid transparent;
     display: block;
     color: abstracts.$text-light;
     position: relative;
@@ -192,36 +192,38 @@
     isolation: isolate;
     overflow: hidden;
 
-    &::before {
+    &::before, &::after {
         content: '';
         position: absolute;
         border-radius: inherit;
-        // width: 200%; 
-//   height: 200%;
-//   top: -50%;
-//   left: -50%;
-  background-color: #000;
-  inset: 1px;
-  z-index: -1; /* Positions the background behind the button content */
+        border: 1px solid transparent;
+        transition: 150ms ease;
+
     }
 
-    &::after {
-        content: '';
-        position: absolute;
-        border-radius: inherit;
-        width: 200%; 
-  height: 200%;
-  top: -50%;
-  left: -50%;
-//   opacity: .5;
-  /* Conic gradient for a sweeping effect */
-  filter: blur(2rem);
-  background: conic-gradient(from 0deg, transparent, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
-  background: conic-gradient(from 0deg, transparent, #ff0000, #ff7300, #fffb00);
-  animation: rotate-gradient 2500ms linear infinite; /* Applies the rotation animation */
-  transition: 250ms;
-  z-index: -2; /* Positions the background behind the button content */
-    }
+    &::before {
+            background-color: #000;
+            inset: 1px;
+            z-index: -1;
+            /* Positions the background behind the button content */
+        }
+
+        &::after {
+            width: 200%;
+            height: 200%;
+            top: -50%;
+            left: -50%;
+            //   opacity: .5;
+            /* Conic gradient for a sweeping effect */
+            filter: blur(2rem);
+            background: conic-gradient(from 0deg, transparent, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+            background: conic-gradient(from 0deg, transparent, #ff0000, #ff7300, #fffb00);
+            animation: rotate-gradient 2500ms linear infinite;
+            /* Applies the rotation animation */
+            transition: 250ms;
+            z-index: -2;
+            /* Positions the background behind the button content */
+        }
 
         @keyframes rotate-gradient {
             0% {
@@ -236,7 +238,7 @@
     
 
     &:hover, &:focus {
-    // color: abstracts.$text-brand;
+    color: abstracts.$text-lighter;
 
     &::after {
         // filter: blur(2rem);
@@ -244,7 +246,8 @@
     }
 
     &::before {
-        background: #111;
+        // background: #111;
+        border-bottom: 1px solid #ff7300;
     }
 
 }
