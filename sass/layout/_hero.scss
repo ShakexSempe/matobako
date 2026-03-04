@@ -191,6 +191,11 @@
     letter-spacing: .15rem;
     isolation: isolate;
     overflow: hidden;
+    cursor: default;
+
+    @include abstracts.sm {
+        cursor: pointer;
+    }
 
     &::before, &::after {
         content: '';

@@ -908,8 +908,14 @@ form #submit-btn:active .icon {
   letter-spacing: 0.15rem;
   isolation: isolate;
   overflow: hidden;
+  cursor: default;
 }
 
+@media (min-width: 576px) {
+  .btn-main {
+    cursor: pointer;
+  }
+}
 .btn-main::before, .btn-main::after {
   content: "";
   position: absolute;
