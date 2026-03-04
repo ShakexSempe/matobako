@@ -165,13 +165,17 @@
 
 
 .btn-main {
+    // border: 1px solid yellow;
     display: block;
     color: abstracts.$text-light;
+    position: relative;
     // color: #C3A356;
-    background: abstracts.$cta-btn;
-    background: #c3a356;
-    background: #D15F33;
-    background: linear-gradient(hsl(17, 63%, 59%), #D15F33);
+    // background: abstracts.$cta-btn;
+    // background: #c3a356;
+    background: blue;
+    background: #000;
+    // background: conic-gradient(red , blue, red, blue);
+    // background: linear-gradient(hsl(17, 63%, 59%), #D15F33);
     
     width: max-content;
     padding: 0.5rem 2rem;
@@ -185,10 +189,63 @@
     text-transform: capitalize;
     text-transform: uppercase;
     letter-spacing: .15rem;
+    isolation: isolate;
+    overflow: hidden;
+
+    &::before {
+        content: '';
+        position: absolute;
+        border-radius: inherit;
+        // width: 200%; 
+//   height: 200%;
+//   top: -50%;
+//   left: -50%;
+  background-color: #000;
+  inset: 1px;
+  z-index: -1; /* Positions the background behind the button content */
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        border-radius: inherit;
+        width: 200%; 
+  height: 200%;
+  top: -50%;
+  left: -50%;
+//   opacity: .5;
+  /* Conic gradient for a sweeping effect */
+  filter: blur(2rem);
+  background: conic-gradient(from 0deg, transparent, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+  background: conic-gradient(from 0deg, transparent, #ff0000, #ff7300, #fffb00);
+  animation: rotate-gradient 2500ms linear infinite; /* Applies the rotation animation */
+  transition: 250ms;
+  z-index: -2; /* Positions the background behind the button content */
+    }
+
+        @keyframes rotate-gradient {
+            0% {
+                transform: rotate(0deg);
+            }
+    
+            100% {
+                transform: rotate(360deg);
+                /* Rotates the background infinitely */
+            }
+        }
     
 
     &:hover, &:focus {
-    color: abstracts.$text-brand;
+    // color: abstracts.$text-brand;
+
+    &::after {
+        // filter: blur(2rem);
+        opacity: 0;
+    }
+
+    &::before {
+        background: #111;
+    }
 
 }
 
